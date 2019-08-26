@@ -1,0 +1,26 @@
+@import "../styles/variables";
+
+.countryCard {
+  background: $white;
+  border-radius: 3px;
+  overflow: hidden;
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__content {
+    padding: 25px;
+  }
+
+  &__name {
+    margin: 0 0 1em;
+    font-size: 16px;
+  }
+}

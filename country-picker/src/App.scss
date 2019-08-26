@@ -1,0 +1,16 @@
+@import "./styles/normalize.scss";
+@import "./styles/scaffolding.scss";
+@import "./styles/variables.scss";
+@import "./styles/fonts.scss";
+
+body {
+  background: $grey-light;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+
+.appWrapper {
+  max-width: $site-width;
+  margin: 0 auto;
+  padding: 0 $gutter;
+}

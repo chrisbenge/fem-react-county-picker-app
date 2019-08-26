@@ -1,20 +1,17 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+
+import { CountryCard } from '../CountryCard/CountryCard';
+
+import styles from './CountryGrid.module.scss';
 
 const CountryGrid = ({ data }) => (
-  <div className="App">
-        {
-          data.countries.map((country) => 
-            <Link to={{
-              pathname: `/country/${country.alpha3Code.toString().toLowerCase()}`,
-              state: {country: country}
-              }} key={country.alpha3Code}>
-              <img src={country.flag} alt={country.name} />
-              {country.name}
-            </Link>
-          )
-        }
-      </div>
+  <div className={styles.countryGrid}>
+    {
+      data.countries.map((country) => 
+        <CountryCard country={country}  key={country.alpha3Code}/>
+      )
+    }
+  </div>
 );
 
 export default CountryGrid;

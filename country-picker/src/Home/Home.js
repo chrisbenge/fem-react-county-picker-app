@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Header } from '../Header/Header';
 import CoutryGrid from '../CountyGrid/CountyGrid';
 
 const Home = () => {
@@ -14,7 +15,10 @@ const Home = () => {
   }, []);
 
   return (
-    <CoutryGrid data={countryData}/>
+    <>
+      <Header />
+      <CoutryGrid data={countryData}/>
+    </>
   )
 };
 
