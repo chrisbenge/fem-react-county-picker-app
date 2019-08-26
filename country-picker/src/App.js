@@ -1,28 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Home from '../src/Home/Home';
+import CountryDetails from '../src/CountryDetails/CountryDetails';
 
 function App() {
-  const [data, setCountries ] = useState({countries: []});
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch('https://restcountries.eu/rest/v2/all')
-      .then(res => res.json());
-      setCountries({countries: data}); 
-    };
-    fetchData();
-  }, []);
-
   return (
-    <div className="App">
-      {
-        data.countries.map((country) => 
-          <div key={country.alpha3Code}>
-            <img src={country.flag} alt={country.name} />
-            {country.name}
-          </div>
-        )
-      }
-    </div>
+    <Router>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/country/:name" component={CountryDetails} />
+    </Router> 
   );
 }
 
