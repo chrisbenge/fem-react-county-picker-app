@@ -1,0 +1,19 @@
+@import "../styles/variables.scss";
+
+.countryDetails {
+  display: grid;
+  gap: $gutter;
+  grid-template-columns: 1fr 1fr;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    font-size: 16px;
+  }
+
+  &__content {
+    align-self: center;
+  }
+}
