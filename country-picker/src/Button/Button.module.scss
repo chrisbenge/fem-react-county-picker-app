@@ -1,0 +1,13 @@
+@import "../styles/functions.scss";
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.button {
+  display: inline-block;
+  border: rem(1px) solid $grey-dark;
+  border-radius: rem(2px);
+  padding: rem(12px) rem(50px);
+  color: $blue-vvdark2;
+  font-weight: 600;
+  text-decoration: none;
+}
