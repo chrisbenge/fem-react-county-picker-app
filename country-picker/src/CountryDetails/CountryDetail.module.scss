@@ -1,9 +1,21 @@
+@import "../styles/functions.scss";
+@import "../styles/mixins.scss";
 @import "../styles/variables.scss";
 
 .countryDetails {
   display: grid;
-  gap: $gutter;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: rem($gutter / 3);
+
+  @include respond-to("small-tablet") {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include respond-to("small-desktop") {
+    gap: rem($gutter);
+  }
 
   &__list {
     margin: 0;

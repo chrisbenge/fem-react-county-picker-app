@@ -1,26 +1,22 @@
-@import "../styles/variables";
+@import "../styles/functions.scss";
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
 
 .countryCard {
   background: $white;
-  border-radius: 3px;
+  border-radius: rem(3px);
   overflow: hidden;
 
   p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-
-    strong {
-      font-weight: 600;
-    }
+    margin-bottom: 0;
+    font-size: rem(14px);
   }
 
   &__content {
-    padding: 25px;
+    padding: rem(25px);
   }
 
   &__name {
-    margin: 0 0 1em;
-    font-size: 16px;
+    font-size: rem(16px);
   }
 }
